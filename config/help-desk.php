@@ -15,7 +15,7 @@ return [
 
     'models' => [
         'user' => \App\Models\User::class,
-        'operator' => \App\Models\User::class,
+        'operator' => \App\Models\Operator::class,
     ],
 
     /*

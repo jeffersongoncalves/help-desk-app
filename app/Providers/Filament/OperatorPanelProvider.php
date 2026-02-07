@@ -26,7 +26,11 @@ class OperatorPanelProvider extends PanelProvider
         return $panel
             ->id('operator')
             ->path('operator')
+            ->authGuard('operator')
+            ->authPasswordBroker('operators')
             ->login()
+            ->passwordReset()
+            ->profile()
             ->colors([
                 'primary' => Color::Emerald,
             ])

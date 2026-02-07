@@ -27,8 +27,12 @@ class UserPanelProvider extends PanelProvider
             ->default()
             ->id('user')
             ->path('/')
+            ->authGuard('web')
+            ->authPasswordBroker('users')
             ->login()
             ->registration()
+            ->passwordReset()
+            ->profile()
             ->colors([
                 'primary' => Color::Blue,
             ])
